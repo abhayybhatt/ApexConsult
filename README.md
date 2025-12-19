@@ -100,6 +100,7 @@ To access the Admin Dashboard locally or on the live site:
 | GET    | /api/subscribe  | Get all subscribers (Admin)     |
 
 ## 📂 Project Structure
+```bash
 
 ApexConsult/
 ├── client/                 # Frontend (React + Vite)
@@ -117,6 +118,7 @@ ApexConsult/
 │   ├── index.js            # Server entry point
 │   └── ...
 └── README.md
+```
 
 ## 👤 Author
 Developed by Abhay Bhatt.
