@@ -1,0 +1,178 @@
+/* --- LAYOUT --- */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 260px;
+    background-color: #1e293b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    box-shadow: 4px 0 10px rgba(0,0,0,0.05);
+}
+
+.sidebar h2 { 
+    text-align: center; 
+    margin-bottom: 40px; 
+    font-size: 1.5rem; 
+    letter-spacing: 1px; 
+    color: #e67e22;
+    font-weight: 700;
+}
+
+.sidebar button {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    padding: 16px 20px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.sidebar button:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+    transform: translateX(5px);
+}
+
+.sidebar button.active {
+    background-color: #e67e22;
+    color: white;
+    box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+}
+
+/* --- MAIN CONTENT AREA --- */
+.content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+/* --- CARDS (Forms & Tables) --- */
+.form-section, .data-list {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #e2e8f0;
+}
+
+.form-section h3, .data-list h3 {
+    margin-bottom: 25px;
+    color: #1e293b;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 15px;
+}
+
+/* --- INPUTS & FORMS --- */
+form { display: flex; flex-direction: column; gap: 20px; }
+
+.admin-container form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+.admin-container input, 
+.admin-container textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    background-color: #f8fafc;
+    margin-bottom: 15px;
+}
+
+.admin-container input:focus, 
+.admin-container textarea:focus {
+    border-color: #e67e22;
+    outline: none;
+    background-color: white;
+}
+
+textarea { min-height: 120px; resize: vertical; }
+
+/* --- FILE UPLOAD --- */
+.file-input-wrapper {
+    background: #f8fafc;
+    padding: 20px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.file-input-wrapper:hover { border-color: #e67e22; background: #fff7ed; }
+
+/* --- BUTTONS --- */
+.save-btn {
+    padding: 15px;
+    background-color: #10b981; /* Success Green */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(16, 185, 129, 0.2);
+}
+
+.save-btn:hover { background-color: #059669; transform: translateY(-2px); }
+
+/* --- TABLES (Messages & Subscribers) --- */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 10px;
+}
+
+th {
+    background-color: #f8fafc;
+    color: #475569;
+    font-weight: 600;
+    text-align: left;
+    padding: 15px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+    vertical-align: middle;
+}
+
+tr:last-child td { border-bottom: none; }
+tr:hover td { background-color: #f8fafc; }
+
+/* List style for subscribers */
+ul { list-style: none; padding: 0; }
+ul li {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+    display: flex;
+    align-items: center;
+}
+ul li::before {
+    content: "📧";
+    margin-right: 10px;
+}
